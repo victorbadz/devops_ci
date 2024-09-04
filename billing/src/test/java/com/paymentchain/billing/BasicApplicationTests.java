@@ -44,6 +44,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc/*allow test only http incoming request layer without start the serve, 
         but starting the full spring application context*/
 public class BasicApplicationTests {
+
   
     @Autowired
     private MockMvc mockMvc;
@@ -103,5 +104,14 @@ public class BasicApplicationTests {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.invoiceId").value(1));
     }
+
+=======
+ 
+ @Test
+ public void contextLoads() {
+ 	    String meessage= "default message cambio test devops segundo";
+ 	    Assert.assertNotNull(meessage);
+ }
+ 
 
 }
